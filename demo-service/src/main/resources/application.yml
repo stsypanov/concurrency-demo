@@ -5,14 +5,8 @@ spring:
   application:
     name: concurrency-demo
 management:
-  endpoint:
-    health:
-      show-details: always
   server:
     port: 8081
-  health:
-    defaults:
-      enabled: false
   endpoints:
     web:
       exposure:
