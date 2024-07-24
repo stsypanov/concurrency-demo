@@ -12,7 +12,6 @@ import java.util.Map;
 @Component
 @RequiredArgsConstructor
 public class DownstreamServiceHealthIndicator implements HealthIndicator {
-
     private final HealthClient healthClient;
 
     @Override
@@ -24,5 +23,4 @@ public class DownstreamServiceHealthIndicator implements HealthIndicator {
             return new Health.Builder().down().withDetails(Map.of("response", response)).build();
         }
     }
-
 }

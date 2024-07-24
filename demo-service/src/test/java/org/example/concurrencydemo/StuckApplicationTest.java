@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class MyTest {
+public class StuckApplicationTest {
 
     @Test
     void name() throws InterruptedException {

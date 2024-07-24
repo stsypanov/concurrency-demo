@@ -1,10 +1,10 @@
-package org.example.dependent;
+package org.example.dependency;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DependentApplicationTests {
+class DependencyApplicationTests {
 
     @Test
     void contextLoads() {

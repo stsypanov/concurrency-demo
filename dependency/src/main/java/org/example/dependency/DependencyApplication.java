@@ -1,13 +1,11 @@
-package org.example.dependent;
+package org.example.dependency;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DependentApplication {
-
+public class DependencyApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DependentApplication.class, args);
+        SpringApplication.run(DependencyApplication.class, args);
     }
-
 }
