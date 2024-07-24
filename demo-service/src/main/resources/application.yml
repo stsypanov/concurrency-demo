@@ -1,0 +1,23 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  application:
+    name: concurrency-demo
+management:
+  endpoint:
+    health:
+      show-details: always
+  server:
+    port: 8081
+  health:
+    defaults:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+downstream:
+  health:
+    url: http://localhost:8087/actuator/health

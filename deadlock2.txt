@@ -1,0 +1,32 @@
+Potential deadlock: frozen threads found
+
+It seems that the following threads have not changed their stack for more than 10 seconds.
+These threads are possibly (but not necessarily!) in a deadlock or hung.
+
++-------------------------------------------------------------------------------------------------------------------+
+|                                                       Name                                                        |
++-------------------------------------------------------------------------------------------------------------------+
+|  +---spring.cloud.inetutils Frozen for at least 10s <Ignore a false positive>                                     |
+|    |                                                                                                              |
+|    +---java.net.Inet6AddressImpl.getHostByAddr(byte[]) Inet6AddressImpl.java (native)                             |
+|    |                                                                                                              |
+|    +---java.net.InetAddress$PlatformResolver.lookupByAddress(byte[]) InetAddress.java:1225                        |
+|    |                                                                                                              |
+|    +---java.net.InetAddress.getHostFromNameService(InetAddress, boolean) InetAddress.java:840                     |
+|    |                                                                                                              |
+|    +---java.net.InetAddress.getHostName(boolean) InetAddress.java:782                                             |
+|    |                                                                                                              |
+|    +---java.net.InetAddress.getHostName() InetAddress.java:754                                                    |
+|    |                                                                                                              |
+|    +---org.springframework.cloud.commons.util.InetUtils$$Lambda.0x0000020921187b68.call()                         |
+|    |                                                                                                              |
+|    +---java.util.concurrent.FutureTask.run() FutureTask.java:317                                                  |
+|    |                                                                                                              |
+|    +---java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor$Worker) ThreadPoolExecutor.java:1144  |
+|    |                                                                                                              |
+|    +---java.util.concurrent.ThreadPoolExecutor$Worker.run() ThreadPoolExecutor.java:642                           |
+|    |                                                                                                              |
+|    +---java.lang.Thread.runWith(Object, Runnable) Thread.java:1596                                                |
+|    |                                                                                                              |
+|    +---java.lang.Thread.run() Thread.java:1583                                                                    |
++-------------------------------------------------------------------------------------------------------------------+
