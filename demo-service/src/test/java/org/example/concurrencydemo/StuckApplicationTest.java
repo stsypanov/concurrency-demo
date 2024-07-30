@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class StuckApplicationTest {
 
     @Test
-    void name() {
+    void run() {
         var restTemplate = new RestTemplate();
         var latch = new CountDownLatch(1);
         var executor = Executors.newVirtualThreadPerTaskExecutor();
