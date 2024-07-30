@@ -7,46 +7,25 @@ These threads are possibly (but not necessarily!) in a deadlock or hung.
 |                                                            Name                                                             |
 +-----------------------------------------------------------------------------------------------------------------------------+
 |  +---Read-Updater Frozen for at least 10s <Ignore a false positive>                                                         |
-|  | |                                                                                                                        |
 |  | +---jdk.internal.misc.Unsafe.park(boolean, long) Unsafe.java (native)                                                    |
-|  | |                                                                                                                        |
 |  | +---java.util.concurrent.locks.LockSupport.park() LockSupport.java:371                                                   |
-|  | |                                                                                                                        |
 |  | +---java.util.concurrent.LinkedTransferQueue$DualNode.await(Object, long, Object, boolean) LinkedTransferQueue.java:458  |
-|  | |                                                                                                                        |
 |  | +---java.util.concurrent.LinkedTransferQueue.xfer(Object, long) LinkedTransferQueue.java:613                             |
-|  | |                                                                                                                        |
 |  | +---java.util.concurrent.LinkedTransferQueue.take() LinkedTransferQueue.java:1257                                        |
-|  | |                                                                                                                        |
 |  | +---sun.nio.ch.Poller.updateLoop() Poller.java:286                                                                       |
-|  | |                                                                                                                        |
 |  | +---sun.nio.ch.Poller$$Lambda.0x000001ac8947d8d8.run()                                                                   |
-|  | |                                                                                                                        |
 |  | +---java.lang.Thread.runWith(Object, Runnable) Thread.java:1596                                                          |
-|  | |                                                                                                                        |
 |  | +---java.lang.Thread.run() Thread.java:1583                                                                              |
-|  | |                                                                                                                        |
 |  | +---jdk.internal.misc.InnocuousThread.run() InnocuousThread.java:186                                                     |
-|  |                                                                                                                          |
 |  +---Write-Updater Frozen for at least 10s <Ignore a false positive>                                                        |
-|    |                                                                                                                        |
 |    +---jdk.internal.misc.Unsafe.park(boolean, long) Unsafe.java (native)                                                    |
-|    |                                                                                                                        |
 |    +---java.util.concurrent.locks.LockSupport.park() LockSupport.java:371                                                   |
-|    |                                                                                                                        |
 |    +---java.util.concurrent.LinkedTransferQueue$DualNode.await(Object, long, Object, boolean) LinkedTransferQueue.java:458  |
-|    |                                                                                                                        |
 |    +---java.util.concurrent.LinkedTransferQueue.xfer(Object, long) LinkedTransferQueue.java:613                             |
-|    |                                                                                                                        |
 |    +---java.util.concurrent.LinkedTransferQueue.take() LinkedTransferQueue.java:1257                                        |
-|    |                                                                                                                        |
 |    +---sun.nio.ch.Poller.updateLoop() Poller.java:286                                                                       |
-|    |                                                                                                                        |
 |    +---sun.nio.ch.Poller$$Lambda.0x000001ac8947d8d8.run()                                                                   |
-|    |                                                                                                                        |
 |    +---java.lang.Thread.runWith(Object, Runnable) Thread.java:1596                                                          |
-|    |                                                                                                                        |
 |    +---java.lang.Thread.run() Thread.java:1583                                                                              |
-|    |                                                                                                                        |
 |    +---jdk.internal.misc.InnocuousThread.run() InnocuousThread.java:186                                                     |
 +-----------------------------------------------------------------------------------------------------------------------------+
